@@ -13,7 +13,7 @@ class PhotoCircle extends React.Component {
           <img src="http://lorempixel.com/400/400" />
         </div>
         <div className="photo-circle-caption">
-          Louisville DSA
+          Louisville Thing
         </div>
       </div>
     );

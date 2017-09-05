@@ -1,5 +1,5 @@
-
 import React from 'react';
+import MenuItem from './MenuItem';
 
 class Menu extends React.Component {
 
@@ -10,14 +10,12 @@ class Menu extends React.Component {
   render() {
     return (
       <div className="menu">
-        <ul>
-          <li>A</li>
-          <li>B</li>
-          <li>C</li>
-          <li>D</li>
-          <li>E</li>
-          <li>F</li>
-        </ul>
+        <MenuItem text="About" />
+        <MenuItem text="News" />
+        <MenuItem text="Blog" />
+        <MenuItem text="Calendar" />
+        <MenuItem text="Swag" />
+        <MenuItem text="Bylaws, etc " />
       </div>
     );
   }
