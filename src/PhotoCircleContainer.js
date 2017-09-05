@@ -10,7 +10,7 @@ class PhotoCircleContainer extends React.Component {
   render() {
     return (
       <div className="photo-circle-container">
-        <PhotoCircle/>
+        <PhotoCircle />
       </div>
     );
   }
