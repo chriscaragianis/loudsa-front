@@ -5,13 +5,11 @@ class MenuItem extends React.Component {
     super(props);
   }
 
-  click(e) {
-    e.target.className = " open";
-  }
-
   render() {
     return(
-      <div className="menu-item" onClick={this.click}>
+      <div
+        className={this.props.clopen}
+        onClick={this.props.onClick}>
         {this.props.text}
       </div>
     )
