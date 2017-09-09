@@ -1,6 +1,12 @@
 import React from 'react';
 import MenuItem from './MenuItem';
 import _ from 'lodash';
+import About from './pages/About';
+import News from './pages/News';
+import Blog from './pages/Blog';
+import Calendar from './pages/Calendar';
+import Swag from './pages/Swag';
+import Bylaws from './pages/Bylaws';
 
 class Menu extends React.Component {
 
@@ -21,17 +27,35 @@ class Menu extends React.Component {
   }
 
   items() {
-    const titles = [
-      "About",
-      "News",
-      "Blog",
-      "Calendar",
-      "Swag",
-      "Bylaws, etc.",
+    const Links = [
+      {
+        text: "About",
+        path: "/about",
+      },
+      {
+        text: "News",
+        path: "/news",
+      },
+      {
+        text: "Blog",
+        path: "/blog",
+      },
+      {
+        text: "Calendar",
+        path: "/calendar",
+      },
+      {
+        text: "Swag",
+        path: "/swag",
+      },
+      {
+        text: "Bylaws",
+        path: "/bylaws",
+      },
     ];
-    return _.map(titles, (val, ind) =>
+    return _.map(Links, (val, ind) =>
       <MenuItem
-        text={val}
+        link={Links[ind]}
         onClick={this.menuClick.bind(this, ind)}
         clopen={
           this.state.open[ind] ? "menu-item-open" : "menu-item"
