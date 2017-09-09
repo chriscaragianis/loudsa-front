@@ -1,4 +1,5 @@
 import React from 'react';
+import { Route } from 'react-router';
 import PhotoCircleContainer from './PhotoCircleContainer';
 
 class ContentContainer extends React.Component {
@@ -9,7 +10,7 @@ class ContentContainer extends React.Component {
   render() {
     return (
       <div className="content-container">
-        hello
+        <Route path="/" component={PhotoCircleContainer} />
       </div>
     )
   }

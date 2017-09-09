@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import ContentContainer from './ContentContainer';
 import MenuContainer from './MenuContainer';
 
@@ -10,10 +11,12 @@ class Layout extends React.Component {
 
   render() {
     return (
-      <div className="layout-container">
-        <ContentContainer />
-        <MenuContainer />
-      </div>
+      <BrowserRouter>
+        <div className="layout-container">
+          <ContentContainer />
+          <MenuContainer />
+        </div>
+      </BrowserRouter>
     );
   }
 }
