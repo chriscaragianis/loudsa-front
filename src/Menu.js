@@ -14,7 +14,7 @@ class Menu extends React.Component {
   menuClick(ind) {
     console.log("called");
     const result = [false, false, false, false, false, false];
-    result[ind] = true;
+    result[ind] = !this.state.open[ind];
     this.setState({
       open: result,
     });

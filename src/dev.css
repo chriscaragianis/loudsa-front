@@ -3,7 +3,7 @@
   width: 100%;
 }
 
-.photo-circle-container {
+.content-container {
   display: flex;
   flex-grow: 1.5;
   justify-content: center;

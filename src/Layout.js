@@ -1,5 +1,5 @@
 import React from 'react';
-import PhotoCircleContainer from './PhotoCircleContainer';
+import ContentContainer from './ContentContainer';
 import MenuContainer from './MenuContainer';
 
 class Layout extends React.Component {
@@ -11,7 +11,7 @@ class Layout extends React.Component {
   render() {
     return (
       <div className="layout-container">
-        <PhotoCircleContainer />
+        <ContentContainer />
         <MenuContainer />
       </div>
     );
