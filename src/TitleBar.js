@@ -12,7 +12,6 @@ class TitleBar extends React.Component {
         <span className="title-text">
           {this.props.text}
         </span>
-        <hr />
       </div>
     );
   }

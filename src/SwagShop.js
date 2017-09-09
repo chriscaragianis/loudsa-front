@@ -1,4 +1,19 @@
 import React from 'react';
+import text from './text';
+import SwagList from './SwagList';
+
+const testItem = {
+  image: "https://lorempixel.com/225/275",
+  caption: "this is the caption",
+};
+
+const testItemList = [
+  testItem,
+  testItem,
+  testItem,
+  testItem,
+  testItem,
+]
 
 class SwagShop extends React.Component {
 
@@ -9,7 +24,10 @@ class SwagShop extends React.Component {
   render() {
     return(
       <div className="swag-shop">
-        shop
+        <div className="swag-shop-message">
+          {text.swagShopMessage}
+        </div>
+        <SwagList items={testItemList} />
       </div>
     );
   }
