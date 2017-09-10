@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import MenuItem from './MenuItem';
 import _ from 'lodash';
 import About from './pages/About';
@@ -68,6 +69,7 @@ class Menu extends React.Component {
     return (
       <div className="menu">
         {this.items()}
+        <Link to="/">Home</Link>
       </div>
     );
   }
