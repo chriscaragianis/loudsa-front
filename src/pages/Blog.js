@@ -11,6 +11,9 @@ class Blog extends React.Component {
 
   constructor(props) {
     super(props);
+    this.state = {
+      list: [],
+    }
   }
 
   componentDidMount() {
@@ -19,14 +22,18 @@ class Blog extends React.Component {
     });
     const list = fetch(request)
       .then((res) => { return res.json(); })
-      .then((json) => { console.log(json); });
+      .then((json) => {
+        this.setState({
+          list: json,
+        })
+      })
   }
 
   render() {
     return(
       <div className="blog-page">
         <TitleBar text="blog" />
-        <PostList list={[testPost]} />
+        <PostList list={this.state.list} />
       </div>
     );
   }
