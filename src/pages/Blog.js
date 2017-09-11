@@ -13,6 +13,15 @@ class Blog extends React.Component {
     super(props);
   }
 
+  componentDidMount() {
+    const request = new Request('http://localhost:4000/api/v1/posts', {
+      method: 'GET',
+    });
+    const list = fetch(request)
+      .then((res) => { return res.json(); })
+      .then((json) => { console.log(json); });
+  }
+
   render() {
     return(
       <div className="blog-page">
