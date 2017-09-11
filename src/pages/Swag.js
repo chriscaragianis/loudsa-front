@@ -10,7 +10,7 @@ class Swag extends React.Component {
 
   render() {
     return(
-      <div className="swag-page">
+      <div className="swag-page page">
         <TitleBar text="swag" />
         <SwagShop />
       </div>

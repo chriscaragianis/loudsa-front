@@ -31,7 +31,7 @@ class Blog extends React.Component {
 
   render() {
     return(
-      <div className="blog-page">
+      <div className="blog-page page">
         <TitleBar text="blog" />
         <PostList list={this.state.list} />
       </div>

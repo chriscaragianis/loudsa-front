@@ -1,6 +1,8 @@
 import React from 'react';
+import TitleBar from '../TitleBar';
+import Calendar from '../Calendar';
 
-class Calendar extends React.Component {
+class CalendarPage extends React.Component {
 
   constructor(props) {
     super(props);
@@ -8,11 +10,12 @@ class Calendar extends React.Component {
 
   render() {
     return(
-      <div className="calendar-page">
-        Calendar
+      <div className="calendar-page page">
+        <TitleBar text="calendar" />
+        <Calendar />
       </div>
     );
   }
 }
 
-export default Calendar;
+export default CalendarPage;

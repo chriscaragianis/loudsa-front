@@ -71,6 +71,9 @@
   padding: 3px;
 }
 
+.page {
+  width: 100%;
+}
 .swag-shop {
   margin-top: 20px;
 }
@@ -97,4 +100,44 @@
   margin-top: 20px;
   margin-left: 30px;
   margin-right: 30px;
+}
+
+.post-list {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40px;
+}
+
+.post-card{
+  width: 70%;
+  margin-left: 15%;
+  box-shadow: -9px 10px 5px 0px rgba(204,204,204,0.56);
+  padding: 1rem;
+  border: 1px solid #ccc;
+}
+
+.post-card .title {
+  color: rgba(214, 41, 46, 1);
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.post-card .author {
+  color: #ccc;
+  margin-left: 40px;
+}
+
+.post-card .date {
+  color: #ccc;
+  margin-left: 40px;
+}
+
+.calendar {
+  margin-top: 40px;
+  width: 70%;
+  margin-left: 15%;
+  box-shadow: -9px 10px 5px 0px rgba(204,204,204,0.56);
+  padding: 1rem;
+  border: 1px solid #ccc;
 }
