@@ -28,6 +28,9 @@ class SwagShop extends React.Component {
           {text.swagShopMessage}
         </div>
         <SwagList items={testItemList} />
+        <TemplateBarf bad={
+          `sd;lfki
+          lskjlkjs;aslk} />
       </div>
     );
   }
