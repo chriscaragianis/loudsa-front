@@ -48,6 +48,9 @@ class OrderView extends React.Component {
     super(props);
   }
 
+  componentDidUpdate() {
+    this.props.update({total: totalCost(this.props.order)});
+  }
   render() {
     const { shirts, buttons, glasses, buttonPacks } = this.props.order;
     return (

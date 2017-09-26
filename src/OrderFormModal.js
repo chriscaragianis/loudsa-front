@@ -13,6 +13,7 @@ class OrderFormModal extends React.Component {
         buttons: [],
         glasses: 0,
         buttonPacks: 0,
+        total: 0,
       },
     };
   }
@@ -31,10 +32,15 @@ class OrderFormModal extends React.Component {
             />
           </div>
           <div className="order-view">
-            <OrderView order={this.state.order} />
+            <OrderView
+              order={this.state.order}
+              update={this.update.bind(this)}
+            />
           </div>
           <div className="order-send">
-            <OrderSend />
+            <OrderSend
+              total={this.state.total}
+            />
           </div>
         </div>
     );
