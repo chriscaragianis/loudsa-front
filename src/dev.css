@@ -243,6 +243,16 @@ div {
   margin-bottom: 10px;
 }
 
+.form-element-name-small {
+  font-size: 1rem;
+  color: rgba(214, 41, 49, 1);
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
 .form-element-group {
   display: flex;
   flex-direction: column;
@@ -264,3 +274,5 @@ div {
   font-size: 1rem;
   margin: 5px;
 }
+
+

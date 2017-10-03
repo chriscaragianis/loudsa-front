@@ -32,7 +32,7 @@ const OrderView = (props) => {
   const { shirts, buttons, glasses, buttonPacks } = props.order;
   return (
     <div>
-      <div className="order-view-title">
+      <div className="form-element-name">
         Order Total
       </div>
       <div>
@@ -41,7 +41,7 @@ const OrderView = (props) => {
         {StyleItemList({ styles: buttons, name: "Button"})}
         <Item count={buttonPacks} item="Button Pax" />
       </div>
-      <div className="order-total">
+      <div className="form-element-name-small">
         <div>
           Donation:
         </div>

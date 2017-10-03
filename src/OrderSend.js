@@ -28,10 +28,40 @@ class OrderSend extends React.Component {
   render() {
     return (
       <div>
-        <SquarePaymentForm
-          appId='sq0idp-lLRC_irNJpIfCNKBE38zyg'
-          onNonceGenerated={this.chargeCard.bind(this)}
-        />
+        Name
+        <div className="form-element-group">
+          <input type="text" />
+        </div>
+        Street
+        <div className="form-element-group">
+          <input type="text" />
+        </div>
+        City
+        <div className="form-element-group">
+          <input type="text" />
+        </div>
+        <div>
+        State
+        <div className="form-element-group">
+          <input type="text" />
+        </div>
+        Zip
+        <div className="form-element-group">
+          <input type="text" />
+        </div>
+        email
+        <div className="form-element-group">
+          <input type="text" />
+        </div>
+        Message
+        <div className="form-element-group">
+          <input type="text" />
+        </div>
+          <SquarePaymentForm
+            appId='sq0idp-lLRC_irNJpIfCNKBE38zyg'
+            onNonceGenerated={this.chargeCard.bind(this)}
+          />
+        </div>
       </div>
     );
   }
