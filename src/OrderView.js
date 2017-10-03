@@ -15,21 +15,6 @@ const Item = (props) => (
   </div>
 );
 
-const totalCost = (order) => {
-  const { shirts, buttons, glasses, buttonPacks } = order;
-  let total = 0;
-  total += 12 * buttonPacks;
-  if (glasses < 2) {
-    total += 8 * glasses;
-  } else if (glasses < 4) {
-    total += 7.5 * glasses;
-  } else {
-    total += 6.25 * glasses;
-  }
-  total += 20 * shirts.length;
-  total += 2 * buttons.length;
-  return total;
-}
 const StyleItemList = (props) => {
   console.log(props);
   const styles = uniq(props.styles);
@@ -43,38 +28,29 @@ const StyleItemList = (props) => {
   });
 };
 
-class OrderView extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
-  componentDidUpdate() {
-    this.props.update({total: totalCost(this.props.order)});
-  }
-  render() {
-    const { shirts, buttons, glasses, buttonPacks } = this.props.order;
-    return (
+const OrderView = (props) => {
+  const { shirts, buttons, glasses, buttonPacks } = props.order;
+  return (
+    <div>
+      <div className="order-view-title">
+        Order Total
+      </div>
       <div>
-        <div className="order-view-title">
-          Order Total
+        {StyleItemList({ styles: shirts, name: "Shirt"})}
+        <Item count={glasses} item="Glasses" />
+        {StyleItemList({ styles: buttons, name: "Button"})}
+        <Item count={buttonPacks} item="Button Pax" />
+      </div>
+      <div className="order-total">
+        <div>
+          Donation:
         </div>
         <div>
-          {StyleItemList({ styles: shirts, name: "Shirt"})}
-          <Item count={glasses} item="Glasses" />
-          {StyleItemList({ styles: buttons, name: "Button"})}
-          <Item count={buttonPacks} item="Button Pax" />
-        </div>
-        <div className="order-total">
-          <div>
-            Donation:
-          </div>
-          <div>
-            {totalCost(this.props.order)}
-          </div>
+          {props.cost}
         </div>
       </div>
-    );
-  }
+    </div>
+  );
 }
 
 export default OrderView;

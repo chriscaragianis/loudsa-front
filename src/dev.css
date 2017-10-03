@@ -1,3 +1,6 @@
+div {
+  font-family: 'Archivo', sans-serif;
+}
 .layout-container {
   display: flex;
   width: 100%;
@@ -154,6 +157,7 @@
 .order-form-modal {
   display: flex;
   justify-content: space-evenly;
+  height: 100vh;
 }
 
 .order-form {
@@ -218,7 +222,7 @@
   margin-bottom: 5px;
 }
 
-.sq-input--focus {
+.)q-input--focus {
   outline: 5px auto rgb(59, 153, 252);
 }
 
@@ -226,3 +230,37 @@
   outline: 5px auto rgb(255, 97, 97);
 }
 
+.form-elements {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-element-name {
+  font-size: 2rem;
+  color: rgba(214, 41, 49, 1);
+  border-bottom: 8px solid rgba(214, 41, 49, 1);
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.form-element-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-element-group select {
+  width: 100%;
+  font-size: 1rem;
+  margin: 5px;
+  margin-bottom: 10px;
+}
+
+.form-element-group button {
+  font-size: 1rem;
+  margin: 5px;
+}
+
+.form-element-group input {
+  font-size: 1rem;
+  margin: 5px;
+}

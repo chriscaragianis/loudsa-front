@@ -18,6 +18,18 @@ const testItemList = [
   testItem,
 ]
 
+const customStyles = {
+  content : {
+    top                   : '50%',
+    left                  : '50%',
+    right                 : 'auto',
+    bottom                : 'auto',
+    marginRight           : '-50%',
+    transform             : 'translate(-50%, -50%)'
+  }
+};
+
+
 class SwagShop extends React.Component {
 
   constructor(props) {
@@ -42,7 +54,10 @@ class SwagShop extends React.Component {
       <div className="open-order-modal" onClick={this.openModal.bind(this)}>
         GET SOME
       </div>
-      <ReactModal isOpen={this.state.modalOpen}>
+      <ReactModal
+        isOpen={this.state.modalOpen}
+        styles={customStyles}
+      >
         <OrderFormModal />
       </ReactModal>
       </div>

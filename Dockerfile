@@ -8,4 +8,4 @@ COPY build/ /usr/src/app/
 
 RUN npm install -g serve
 
-CMD [ "serve", "-p", "4000", "." ]
+CMD [ "serve", "-p", "5000", "." ]
