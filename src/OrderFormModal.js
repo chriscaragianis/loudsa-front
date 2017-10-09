@@ -5,6 +5,7 @@ import OrderSend from './OrderSend';
 import merge from 'lodash/merge';
 import includes from 'lodash/includes';
 import cloneDeep from 'lodash/cloneDeep';
+import { valid } from './formHelpers';
 
 const initialOrder = {
   shirts: [],
@@ -27,7 +28,7 @@ const totalCost = (order) => {
   }
   total += 20 * shirts.length;
   total += 2 * buttons.length;
-  return total;
+  return total * 100;
 }
 
 class OrderFormModal extends React.Component {
@@ -36,10 +37,19 @@ class OrderFormModal extends React.Component {
     this.state = {
       order: cloneDeep(initialOrder),
       cost: 0,
+      info: {
+        name: '',
+        street: '',
+        city: '',
+        zip: '',
+        email: '',
+        message: '',
+      },
+      ok: false,
     };
   }
 
-  update(e) {
+  updateOrder(e) {
     const key = e.target.id.split('-')[1];
     const next = cloneDeep(this.state.order);
     if (includes(['shirts', 'buttons'], key)) {
@@ -51,8 +61,8 @@ class OrderFormModal extends React.Component {
       const val = document.getElementById(`${key}-input`).value;
       next[key] = parseInt(val);
     }
-    const cost = totalCost(next);
-    this.setState({ order: cloneDeep(next), cost });
+    next.total = totalCost(next);
+    this.setState({ order: cloneDeep(next) });
   }
 
   clear(e) {
@@ -66,24 +76,44 @@ class OrderFormModal extends React.Component {
     this.setState({ order: next, cost: totalCost(next) });
   }
 
+  onSend() {
+    const message = {
+      name: document.getElementById('name').value,
+      street: document.getElementById('street').value,
+      city: document.getElementById('city').value,
+      state: document.getElementById('state').value,
+      zip: document.getElementById('zip').value,
+      email: document.getElementById('email').value,
+      message: document.getElementById('message').value,
+      order: this.state.order,
+    };
+    // validate then set ok
+    if (valid(message)) {
+      console.log('valid msg')
+      this.setState({ ok: true });
+    }
+  }
+
   render() {
     return (
         <div className="order-form-modal">
           <div className="order-form">
             <OrderForm
-              update={this.update.bind(this)}
+              update={this.updateOrder.bind(this)}
               clear={this.clear.bind(this)}
             />
           </div>
           <div className="order-view">
             <OrderView
               order={this.state.order}
-              cost={this.state.cost}
             />
           </div>
           <div className="order-send">
             <OrderSend
+              ok={this.state.ok}
               total={this.state.total}
+              onSend={this.onSend.bind(this)}
+              order={this.state.order}
             />
           </div>
         </div>

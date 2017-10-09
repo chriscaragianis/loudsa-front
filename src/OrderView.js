@@ -46,7 +46,7 @@ const OrderView = (props) => {
           Donation:
         </div>
         <div>
-          {props.cost}
+          {props.order.total / 100}
         </div>
       </div>
     </div>

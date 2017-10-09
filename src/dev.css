@@ -199,9 +199,6 @@ div {
   justify-content: space-between;
 }
 
-.item-name {
-}
-
 .order-total{
   display: flex;
   justify-content: space-between;
@@ -222,7 +219,7 @@ div {
   margin-bottom: 5px;
 }
 
-.)q-input--focus {
+.sq-input--focus {
   outline: 5px auto rgb(59, 153, 252);
 }
 

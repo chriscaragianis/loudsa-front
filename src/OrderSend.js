@@ -5,12 +5,13 @@ class OrderSend extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      location: '65BT0A9DMMN0E',
+      location: 'CBASEP7mCQnQPITME9OOFQTfjTEgAQ',
     };
   }
 
   chargeCard(nonce, cardData) {
-    fetch('http://localhost:4000/api/v1/charge',
+    // wait for ok
+    fetch('https://api.dsalouisville.org/api/v1/charge',
       {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
@@ -18,9 +19,18 @@ class OrderSend extends React.Component {
           amount: this.props.total,
           card_nonce: nonce,
           location_id: this.state.location,
+          message: {
+            name: document.getElementById('name').value,
+            street: document.getElementById('street').value,
+            city: document.getElementById('city').value,
+            state: document.getElementById('state').value,
+            zip: document.getElementById('zip').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value,
+          },
+          order: this.props.order,
         }),
       })
-      .then((res) => res.json())
       .then((res) => console.log(res))
   }
 
@@ -30,35 +40,35 @@ class OrderSend extends React.Component {
       <div>
         Name
         <div className="form-element-group">
-          <input type="text" />
+          <input id="name" type="text" />
         </div>
         Street
         <div className="form-element-group">
-          <input type="text" />
+          <input id="street" type="text" />
         </div>
         City
         <div className="form-element-group">
-          <input type="text" />
+          <input id="city" type="text" />
         </div>
         <div>
         State
         <div className="form-element-group">
-          <input type="text" />
+          <input id="state" type="text" />
         </div>
         Zip
         <div className="form-element-group">
-          <input type="text" />
+          <input id="zip" type="text" />
         </div>
         email
         <div className="form-element-group">
-          <input type="text" />
+          <input id="email" type="text" />
         </div>
         Message
         <div className="form-element-group">
-          <input type="text" />
+          <input id="message" type="text" />
         </div>
           <SquarePaymentForm
-            appId='sq0idp-lLRC_irNJpIfCNKBE38zyg'
+            appId='sandbox-sq0idp-lLRC_irNJpIfCNKBE38zyg'
             onNonceGenerated={this.chargeCard.bind(this)}
           />
         </div>
