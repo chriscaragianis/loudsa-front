@@ -11,5 +11,7 @@ describe('Menu navigation', () => {
     cy.visit('localhost:3000');
     cy.contains('Swag').click()
     cy.contains('Red needs green');
+    cy.contains('Home').click();
+    cy.contains('Louisville Thing');
   });
 });

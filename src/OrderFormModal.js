@@ -114,6 +114,7 @@ class OrderFormModal extends React.Component {
               total={this.state.total}
               onSend={this.onSend.bind(this)}
               order={this.state.order}
+              closeModal={this.props.closeModal}
             />
           </div>
         </div>

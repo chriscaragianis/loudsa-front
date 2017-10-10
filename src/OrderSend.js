@@ -31,7 +31,15 @@ class OrderSend extends React.Component {
           order: this.props.order,
         }),
       })
-      .then((res) => console.log(res))
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        if (res.resp.status_code === 200) {
+          alert('Success!');
+          this.props.closeModal();
+        } else alert('Error processing, please check info and try again');
+      });
   }
 
 
@@ -70,6 +78,7 @@ class OrderSend extends React.Component {
           <SquarePaymentForm
             appId='sandbox-sq0idp-lLRC_irNJpIfCNKBE38zyg'
             onNonceGenerated={this.chargeCard.bind(this)}
+            onNonceError={() => {alert('Error processing payment, please check info and try again')}}
           />
         </div>
       </div>

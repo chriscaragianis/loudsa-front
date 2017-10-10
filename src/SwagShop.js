@@ -44,6 +44,12 @@ class SwagShop extends React.Component {
       modalOpen: true,
     });
   }
+
+  closeModal() {
+    this.setState({
+      modalOpen: false,
+    });
+  }
   render() {
     return(
       <div className="swag-shop">
@@ -58,7 +64,9 @@ class SwagShop extends React.Component {
         isOpen={this.state.modalOpen}
         styles={customStyles}
       >
-        <OrderFormModal />
+        <OrderFormModal
+          closeModal={this.closeModal.bind(this)}
+        />
       </ReactModal>
       </div>
     );
