@@ -16,7 +16,7 @@ class ContentContainer extends React.Component {
   render() {
     return (
       <div className="content-container">
-        <Route exact path="/" component={PhotoCircleContainer} />
+        <Route exact path="/" component={Swag} />
         <Route path="/about" component={About} />
         <Route path="/news" component={News} />
         <Route path="/blog" component={Blog} />
