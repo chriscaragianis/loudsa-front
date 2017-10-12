@@ -78,7 +78,23 @@ div {
 }
 .swag-shop {
   margin-top: 20px;
+  display: flex;
+  flex-direction: column;
 }
+
+.open-order-modal {
+  font-family: Impact;
+  font-style: italic;
+  text-shadow: 2px 2px #FF0000;
+  font-size: 2rem;
+  align-self: center;
+  margin-top: 3rem;
+}
+
+.open-order-modal:hover {
+  color: white;
+}
+
 .swag-shop-message {
   max-width: 70%;
   margin-left: 15%;

@@ -19,7 +19,7 @@ import buttonPaxjpg from './buttonPax.jpg';
 
 const shirt = {
   image: shirtjpg,
-  caption: "Louisville DSA shirts, comfy and stylish. Sizes S-XXXL. $25",
+  caption: "Louisville DSA shirts, comfy and stylish. Sizes S-XXXL. $20",
 };
 
 const glasses= {
@@ -111,22 +111,23 @@ class SwagShop extends React.Component {
       modalOpen: false,
     });
   }
+
   render() {
     return(
       <div className="swag-shop">
-      <SwagMessage />
-      <SwagList items={testItemList} />
-      <div className="open-order-modal" onClick={this.openModal.bind(this)}>
-        GET SOME
-      </div>
-      <ReactModal
-        isOpen={this.state.modalOpen}
-        styles={customStyles}
-      >
-        <OrderFormModal
-          closeModal={this.closeModal.bind(this)}
-        />
-      </ReactModal>
+        <SwagMessage />
+        <div className="open-order-modal" onClick={this.openModal.bind(this)}>
+          {' --> GET SOME <-- '}
+        </div>
+        <SwagList items={testItemList} />
+        <ReactModal
+          isOpen={this.state.modalOpen}
+          styles={customStyles}
+        >
+          <OrderFormModal
+            closeModal={this.closeModal.bind(this)}
+          />
+        </ReactModal>
       </div>
     );
   }
