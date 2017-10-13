@@ -72,6 +72,7 @@ const testItemList = [
   glasses,
   marx,
   queersolidarity,
+  rosa,
   trans,
   rainbow,
   socilism,
