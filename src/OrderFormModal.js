@@ -57,12 +57,10 @@ class OrderFormModal extends React.Component {
   shippingCost(order) {
     console.log(order)
     const boxes = Math.ceil(order.glasses / 4);
-    let envs = 0;
     let bags = order.shirts.length - boxes;
     if (bags < 0) bags = 0;
-    if (boxes === 0) {
-      envs = Math.ceil(((order.buttonPacks * 8) + order.buttons.length) / 8);
-    }
+    let envs = Math.ceil(((order.buttonPacks * 8) + order.buttons.length) / 8) - boxes - (Math.ceil(bags / 2));
+    if (envs < 0) envs = 0;
     const cost = (8 * boxes) + (4 * bags) + (2 * envs);
     order.boxes = boxes;
     order.bags = bags;

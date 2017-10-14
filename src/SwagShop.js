@@ -22,6 +22,16 @@ const shirt = {
   caption: "Louisville DSA shirts, comfy and stylish. Sizes S-XXXL. $20",
 };
 
+const falgsc= {
+  image: falgscjpg,
+  caption: "Fully Automated Luxury Gay Space Communism button $2"
+};
+
+const buttonPax = {
+  image: buttonPaxjpg,
+  caption: "Button Pax: One each of all eight button designs. $12",
+};
+
 const glasses= {
   image: glassesjpg,
   caption: "\"Old Fashioned Socialism\" tumbler. $8 for 1, $15 for two, $25 for four.",
@@ -73,11 +83,13 @@ const testItemList = [
   marx,
   queersolidarity,
   rosa,
+  falgsc,
   trans,
   rainbow,
   socilism,
   logo,
   bread,
+  buttonPax,
 ]
 
 const customStyles = {
