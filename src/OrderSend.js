@@ -15,7 +15,7 @@ class OrderSend extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      location: 'CBASEP7mCQnQPITME9OOFQTfjTEgAQ',
+      location: '65BT0A9DMMN0E',
     };
   }
 
@@ -91,7 +91,7 @@ class OrderSend extends React.Component {
           <input id="message" type="text" />
         </div>
           <SquarePaymentForm
-            appId='sandbox-sq0idp-lLRC_irNJpIfCNKBE38zyg'
+            appId='sq0idp-lLRC_irNJpIfCNKBE38zyg'
             onNonceGenerated={this.chargeCard.bind(this)}
             onNonceError={() => {alert('Error processing payment, please check info and try again')}}
           />
