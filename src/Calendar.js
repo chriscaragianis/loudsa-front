@@ -30,6 +30,9 @@ const customStyles = {
 
 const EventModal = (props) => (
   <div className="event-modal">
+    <div className="closeX" onClick={props.closeModal}>
+      X
+    </div>
     {JSON.stringify(props, null, '  ')}
   </div>
 );
@@ -60,6 +63,17 @@ class Calendar extends React.Component {
         })
       })
   }
+  openModal() {
+    this.setState({
+      modalOpen: true,
+    });
+  }
+
+  closeModal() {
+    this.setState({
+      modalOpen: false,
+    });
+  }
   calendar() {
     return this.state.modalOpen ? '' : (
       <BigCalendar
@@ -85,7 +99,10 @@ class Calendar extends React.Component {
           isOpen={this.state.modalOpen}
           styles={customStyles}
         >
-          <EventModal {...this.state.modalProps} />
+          <EventModal
+            closeModal={this.closeModal.bind(this)}
+            {...this.state.modalProps}
+          />
         </ReactModal>
     </div>
     );
