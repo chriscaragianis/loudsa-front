@@ -28,12 +28,20 @@ const customStyles = {
   }
 };
 
+const EventModal = (props) => (
+  <div className="event-modal">
+    {JSON.stringify(props, null, '  ')}
+  </div>
+);
+
 class Calendar extends React.Component {
 
   constructor(props) {
     super(props);
     this.state = {
       events: eventsFixture,
+      modalProps: {},
+      modalOpen: false,
     }
   }
   componentDidMount() {
@@ -52,21 +60,33 @@ class Calendar extends React.Component {
         })
       })
   }
+  calendar() {
+    return this.state.modalOpen ? '' : (
+      <BigCalendar
+        selectable
+        events={this.state.events}
+        startAccessor='startTime'
+        endAccessor='endTime'
+        onSelectEvent={(e) => {
+          this.setState({
+            modalOpen: true,
+            modalProps: e,
+          })
+        }}
+      />
+    );
+  }
 
   render() {
     return(
       <div className="calendar">
-        <BigCalendar
-          selectable
-          events={this.state.events}
-          startAccessor='startTime'
-          endAccessor='endTime'
-          onSelectEvent={(e) => { console.log(e); alert('selected!'); }}
-        />
+        {this.calendar()}
         <ReactModal
           isOpen={this.state.modalOpen}
           styles={customStyles}
-        />
+        >
+          <EventModal {...this.state.modalProps} />
+        </ReactModal>
     </div>
     );
   }
