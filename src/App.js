@@ -7,7 +7,9 @@ import './react-big-calendar.css';
 class App extends Component {
   render() {
     return (
-      <Layout />
+      <div>
+        "hello"
+      </div>
     );
   }
 }
