@@ -3,13 +3,12 @@ import TitleBar from '../TitleBar';
 import Calendar from '../Calendar';
 
 class CalendarPage extends React.Component {
-
   constructor(props) {
     super(props);
   }
 
   render() {
-    return(
+    return (
       <div className="calendar-page page">
         <TitleBar text="calendar" />
         <Calendar />

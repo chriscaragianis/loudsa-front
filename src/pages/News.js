@@ -1,13 +1,12 @@
 import React from 'react';
 
 class News extends React.Component {
-
   constructor(props) {
     super(props);
   }
 
   render() {
-    return(
+    return (
       <div className="news-page">
         News
       </div>

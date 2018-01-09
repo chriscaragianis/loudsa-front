@@ -11,7 +11,8 @@ class OrderSend extends React.Component {
 
   chargeCard(nonce, cardData) {
     // wait for ok
-    fetch('https://api.dsalouisville.org/api/v1/charge',
+    fetch(
+      'https://api.dsalouisville.org/api/v1/charge',
       {
         method: 'post',
         headers: { 'Content-Type': 'application/json' },
@@ -30,8 +31,9 @@ class OrderSend extends React.Component {
           },
           order: this.props.order,
         }),
-      })
-      .then((res) => console.log(res))
+      },
+    )
+      .then((res) => console.log(res));
   }
 
 
@@ -52,21 +54,21 @@ class OrderSend extends React.Component {
         </div>
         <div>
         State
-        <div className="form-element-group">
-          <input id="state" type="text" />
-        </div>
+          <div className="form-element-group">
+            <input id="state" type="text" />
+          </div>
         Zip
-        <div className="form-element-group">
-          <input id="zip" type="text" />
-        </div>
+          <div className="form-element-group">
+            <input id="zip" type="text" />
+          </div>
         email
-        <div className="form-element-group">
-          <input id="email" type="text" />
-        </div>
+          <div className="form-element-group">
+            <input id="email" type="text" />
+          </div>
         Message
-        <div className="form-element-group">
-          <input id="message" type="text" />
-        </div>
+          <div className="form-element-group">
+            <input id="message" type="text" />
+          </div>
           <SquarePaymentForm
             appId='sandbox-sq0idp-lLRC_irNJpIfCNKBE38zyg'
             onNonceGenerated={this.chargeCard.bind(this)}
@@ -75,6 +77,6 @@ class OrderSend extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default OrderSend;

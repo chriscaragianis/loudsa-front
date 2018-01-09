@@ -18,10 +18,10 @@ const Item = (props) => (
 const StyleItemList = (props) => {
   console.log(props);
   const styles = uniq(props.styles);
-  console.log('styles', styles)
+  console.log('styles', styles);
   return map(styles, (style) => {
     const count = countBy(props.styles, identity);
-    console.log('count', count)
+    console.log('count', count);
     return (
       <Item item={`${props.name} ${style}`} count={count[style]} />
     );
@@ -29,16 +29,18 @@ const StyleItemList = (props) => {
 };
 
 const OrderView = (props) => {
-  const { shirts, buttons, glasses, buttonPacks } = props.order;
+  const {
+    shirts, buttons, glasses, buttonPacks,
+  } = props.order;
   return (
     <div>
       <div className="form-element-name">
         Order Total
       </div>
       <div>
-        {StyleItemList({ styles: shirts, name: "Shirt"})}
+        {StyleItemList({ styles: shirts, name: 'Shirt' })}
         <Item count={glasses} item="Glasses" />
-        {StyleItemList({ styles: buttons, name: "Button"})}
+        {StyleItemList({ styles: buttons, name: 'Button' })}
         <Item count={buttonPacks} item="Button Pax" />
       </div>
       <div className="form-element-name-small">
@@ -51,6 +53,6 @@ const OrderView = (props) => {
       </div>
     </div>
   );
-}
+};
 
 export default OrderView;

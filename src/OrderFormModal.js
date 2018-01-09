@@ -16,7 +16,9 @@ const initialOrder = {
 };
 
 const totalCost = (order) => {
-  const { shirts, buttons, glasses, buttonPacks } = order;
+  const {
+    shirts, buttons, glasses, buttonPacks,
+  } = order;
   let total = 0;
   total += 12 * buttonPacks;
   if (glasses < 2) {
@@ -29,7 +31,7 @@ const totalCost = (order) => {
   total += 20 * shirts.length;
   total += 2 * buttons.length;
   return total * 100;
-}
+};
 
 class OrderFormModal extends React.Component {
   constructor(props) {
@@ -89,36 +91,36 @@ class OrderFormModal extends React.Component {
     };
     // validate then set ok
     if (valid(message)) {
-      console.log('valid msg')
+      console.log('valid msg');
       this.setState({ ok: true });
     }
   }
 
   render() {
     return (
-        <div className="order-form-modal">
-          <div className="order-form">
-            <OrderForm
-              update={this.updateOrder.bind(this)}
-              clear={this.clear.bind(this)}
-            />
-          </div>
-          <div className="order-view">
-            <OrderView
-              order={this.state.order}
-            />
-          </div>
-          <div className="order-send">
-            <OrderSend
-              ok={this.state.ok}
-              total={this.state.total}
-              onSend={this.onSend.bind(this)}
-              order={this.state.order}
-            />
-          </div>
+      <div className="order-form-modal">
+        <div className="order-form">
+          <OrderForm
+            update={this.updateOrder.bind(this)}
+            clear={this.clear.bind(this)}
+          />
         </div>
+        <div className="order-view">
+          <OrderView
+            order={this.state.order}
+          />
+        </div>
+        <div className="order-send">
+          <OrderSend
+            ok={this.state.ok}
+            total={this.state.total}
+            onSend={this.onSend.bind(this)}
+            order={this.state.order}
+          />
+        </div>
+      </div>
     );
   }
-};
+}
 
 export default OrderFormModal;

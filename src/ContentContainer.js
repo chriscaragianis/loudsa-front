@@ -24,7 +24,7 @@ class ContentContainer extends React.Component {
         <Route path="/swag" component={Swag} />
         <Route path="/bylaws" component={Bylaws} />
       </div>
-    )
+    );
   }
 }
 
