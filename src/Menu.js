@@ -4,7 +4,6 @@ import MenuItem from './MenuItem';
 import _ from 'lodash';
 import About from './pages/About';
 import News from './pages/News';
-import Blog from './pages/Blog';
 import Calendar from './pages/Calendar';
 import Swag from './pages/Swag';
 import Bylaws from './pages/Bylaws';
@@ -35,10 +34,6 @@ class Menu extends React.Component {
       {
         text: 'News',
         path: '/news',
-      },
-      {
-        text: 'Blog',
-        path: '/blog',
       },
       {
         text: 'Calendar',

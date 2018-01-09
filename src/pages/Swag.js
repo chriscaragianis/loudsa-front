@@ -1,5 +1,4 @@
 import React from 'react';
-import TitleBar from '../TitleBar';
 import SwagShop from '../SwagShop';
 
 class Swag extends React.Component {
@@ -10,7 +9,6 @@ class Swag extends React.Component {
   render() {
     return (
       <div className="swag-page page">
-        <TitleBar text="swag" />
         <SwagShop />
       </div>
     );
