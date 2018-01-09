@@ -93,19 +93,17 @@ const testItemList = [
 ]
 
 const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
 };
 
-
 class SwagShop extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -126,7 +124,7 @@ class SwagShop extends React.Component {
   }
 
   render() {
-    return(
+    return (
       <div className="swag-shop">
         <SwagMessage />
         <div className="open-order-modal" onClick={this.openModal.bind(this)}>

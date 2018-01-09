@@ -20,41 +20,30 @@ class OrderSend extends React.Component {
   }
 
   chargeCard(nonce, cardData) {
-    const message = {
-      name: document.getElementById('name').value,
-      street: document.getElementById('street').value,
-      city: document.getElementById('city').value,
-      state: document.getElementById('state').value,
-      zip: document.getElementById('zip').value,
-      email: document.getElementById('email').value,
-      message: document.getElementById('message').value,
-    };
-    const val = validate(message);
-    if (val === 'ok') {
-      fetch('https://api.dsalouisville.org/api/v1/charge',
-        {
-          method: 'post',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            amount: this.props.total,
-            card_nonce: nonce,
-            location_id: this.state.location,
-            order: this.props.order,
-            message,
-          }),
-        })
-        .then((res) => {
-          return res.json();
-        })
-        .then((res) => {
-          if (res.resp.status_code === 200) {
-            alert('Success!');
-            this.props.closeModal();
-          } else alert('Error processing, please check info and try again');
-        });
-    } else {
-      alert(val);
-    }
+    // wait for ok
+    fetch(
+      'https://api.dsalouisville.org/api/v1/charge',
+      {
+        method: 'post',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          amount: this.props.total,
+          card_nonce: nonce,
+          location_id: this.state.location,
+          message: {
+            name: document.getElementById('name').value,
+            street: document.getElementById('street').value,
+            city: document.getElementById('city').value,
+            state: document.getElementById('state').value,
+            zip: document.getElementById('zip').value,
+            email: document.getElementById('email').value,
+            message: document.getElementById('message').value,
+          },
+          order: this.props.order,
+        }),
+      },
+    )
+      .then((res) => console.log(res));
   }
 
 
@@ -75,21 +64,21 @@ class OrderSend extends React.Component {
         </div>
         <div>
         State
-        <div className="form-element-group">
-          <input id="state" type="text" />
-        </div>
+          <div className="form-element-group">
+            <input id="state" type="text" />
+          </div>
         Zip
-        <div className="form-element-group">
-          <input id="zip" type="text" />
-        </div>
+          <div className="form-element-group">
+            <input id="zip" type="text" />
+          </div>
         email
-        <div className="form-element-group">
-          <input id="email" type="text" />
-        </div>
+          <div className="form-element-group">
+            <input id="email" type="text" />
+          </div>
         Message
-        <div className="form-element-group">
-          <input id="message" type="text" />
-        </div>
+          <div className="form-element-group">
+            <input id="message" type="text" />
+          </div>
           <SquarePaymentForm
             appId='sq0idp-lLRC_irNJpIfCNKBE38zyg'
             onNonceGenerated={this.chargeCard.bind(this)}
@@ -99,6 +88,6 @@ class OrderSend extends React.Component {
       </div>
     );
   }
-};
+}
 
 export default OrderSend;

@@ -8,19 +8,20 @@ class MenuItem extends React.Component {
 
   render() {
     const { link, clopen, onClick } = this.props;
-    return(
+    return (
       <div
         className={clopen}
-        onClick={onClick}>
+        onClick={onClick}
+      >
         <Link
           to={link.path}
         >
           {link.text}
         </Link>
       </div>
-    )
+    );
   }
-
 }
 
-export default MenuItem
+export default MenuItem;
+

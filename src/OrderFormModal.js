@@ -19,6 +19,23 @@ const initialOrder = {
   shippingTotal: 0,
 };
 
+const totalCost = (order) => {
+  const {
+    shirts, buttons, glasses, buttonPacks,
+  } = order;
+  let total = 0;
+  total += 12 * buttonPacks;
+  if (glasses < 2) {
+    total += 8 * glasses;
+  } else if (glasses < 4) {
+    total += 7.5 * glasses;
+  } else {
+    total += 6.25 * glasses;
+  }
+  total += 20 * shirts.length;
+  total += 2 * buttons.length;
+  return total * 100;
+};
 
 class OrderFormModal extends React.Component {
   constructor(props) {
@@ -115,7 +132,7 @@ class OrderFormModal extends React.Component {
     };
     // validate then set ok
     if (valid(message)) {
-      console.log('valid msg')
+      console.log('valid msg');
       this.setState({ ok: true });
     }
   }
@@ -149,6 +166,6 @@ class OrderFormModal extends React.Component {
         </div>
     );
   }
-};
+}
 
 export default OrderFormModal;

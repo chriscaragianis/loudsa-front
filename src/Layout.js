@@ -3,7 +3,6 @@ import ContentContainer from './ContentContainer';
 import MenuContainer from './MenuContainer';
 
 class Layout extends React.Component {
-
   constructor(props) {
     super(props);
   }
