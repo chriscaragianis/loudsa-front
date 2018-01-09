@@ -43,6 +43,10 @@ const OrderView = (props) => {
         {StyleItemList({ styles: buttons, name: 'Button' })}
         <Item count={buttonPacks} item="Button Pax" />
       </div>
+      <div className="shipping">
+        Ships in {props.order.boxes} boxes, {props.order.bags} bags, and {props.order.envs} envelopes
+        at a cost of ${props.order.shippingTotal / 100}
+      </div>
       <div className="form-element-name-small">
         <div>
           Donation:
