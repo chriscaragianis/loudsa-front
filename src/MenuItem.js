@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom'
 
 class MenuItem extends React.Component {
   constructor(props) {
@@ -23,4 +23,5 @@ class MenuItem extends React.Component {
 
 }
 
-export default MenuItem
+export default MenuItem;
+

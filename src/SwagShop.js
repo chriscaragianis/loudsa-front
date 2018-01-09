@@ -7,7 +7,7 @@ import shirt from './shirt.jpg';
 
 const testItem = {
   image: shirt,
-  caption: "Louisville DSA shirts, comfy and stylish. Sizes S-XXXL. $25",
+  caption: 'Louisville DSA shirts, comfy and stylish. Sizes S-XXXL. $25',
 };
 
 const testItemList = [
@@ -16,22 +16,20 @@ const testItemList = [
   testItem,
   testItem,
   testItem,
-]
+];
 
 const customStyles = {
-  content : {
-    top                   : '50%',
-    left                  : '50%',
-    right                 : 'auto',
-    bottom                : 'auto',
-    marginRight           : '-50%',
-    transform             : 'translate(-50%, -50%)'
-  }
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
 };
 
-
 class SwagShop extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -45,21 +43,21 @@ class SwagShop extends React.Component {
     });
   }
   render() {
-    return(
+    return (
       <div className="swag-shop">
-      <div className="swag-shop-message">
-      {text.swagShopMessage}
-      </div>
-      <SwagList items={testItemList} />
-      <div className="open-order-modal" onClick={this.openModal.bind(this)}>
-        GET SOME
-      </div>
-      <ReactModal
-        isOpen={this.state.modalOpen}
-        styles={customStyles}
-      >
-        <OrderFormModal />
-      </ReactModal>
+        <div className="swag-shop-message">
+          {text.swagShopMessage}
+        </div>
+        <SwagList items={testItemList} />
+        <div className="open-order-modal" onClick={this.openModal.bind(this)}>
+          GET SOME
+        </div>
+        <ReactModal
+          isOpen={this.state.modalOpen}
+          styles={customStyles}
+        >
+          <OrderFormModal />
+        </ReactModal>
       </div>
     );
   }

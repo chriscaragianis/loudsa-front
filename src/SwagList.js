@@ -1,28 +1,20 @@
 import React from 'react';
 import _ from 'lodash';
 
-class SwagList extends React.Component {
+const getItems = (props) => {
+  const { items } = props;
+  return _.map(items, (x) => (
+    <div className="swag-item">
+      <img src={x.image} />
+      {x.caption}
+    </div>
+  ));
+};
 
-  constructor(props) {
-    super(props);
-  }
-
-  getItems() {
-    const items = this.props.items;
-    return _.map(items, (x) => (
-      <div className="swag-item">
-        <img src={x.image} />
-        {x.caption}
-      </div>
-    ));
-  }
-  render() {
-    return(
-      <div className="swag-list">
-        {this.getItems()}
-      </div>
-    );
-  }
-}
+const SwagList = (props) => (
+  <div className="swag-list">
+    {getItems(props)}
+  </div>
+);
 
 export default SwagList;
