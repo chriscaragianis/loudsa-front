@@ -9,9 +9,9 @@ const About = () => (
       { Lorem }
     </div>
     <div className="image-strip">
-      <Image src="http://lorempixel.com/200/200" />
-      <Image src="http://lorempixel.com/200/200" />
-      <Image src="http://lorempixel.com/200/200" />
+      <Image src="http://lorempixel.com/200/200" caption="A caption for the picture" />
+      <Image src="http://lorempixel.com/200/200" caption="A caption for the picture" />
+      <Image src="http://lorempixel.com/200/200" caption="A caption for the picture" />
     </div>
   </div>
 );
