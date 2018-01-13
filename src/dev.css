@@ -6,12 +6,6 @@ div {
   width: 100%;
 }
 
-.content-container {
-  display: flex;
-  width: 66.67%;
-  justify-content: center;
-}
-
 .menu-container {
   flex-grow: 1;
 }

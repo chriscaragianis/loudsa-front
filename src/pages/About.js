@@ -1,18 +1,19 @@
 import React from 'react';
+import Image from '../Image';
+import Lorem from '../lorem';
 
-class About extends React.Component {
-
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    return(
-      <div className="about-page">
-        About
-      </div>
-    );
-  }
-}
+const About = () => (
+  <div className="page about-page">
+    <div className="copy about-copy">
+      <h1>About us</h1>
+      { Lorem }
+    </div>
+    <div className="image-strip">
+      <Image src="http://lorempixel.com/200/200" />
+      <Image src="http://lorempixel.com/200/200" />
+      <Image src="http://lorempixel.com/200/200" />
+    </div>
+  </div>
+);
 
 export default About;
