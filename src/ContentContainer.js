@@ -16,12 +16,12 @@ class ContentContainer extends React.Component {
   render() {
     return (
       <div className="content-container">
-        <Route exact path="/" component={Swag} />
+        <Route exact path="/" component={About} />
         <Route path="/about" component={About} />
         <Route path="/news" component={News} />
         <Route path="/blog" component={Blog} />
         <Route path="/calendar" component={CalendarPage} />
-        <Route path="/swag" component={Swag} />
+        <Route path="/swag" component={About} />
         <Route path="/bylaws" component={Bylaws} />
       </div>
     )

@@ -31,26 +31,6 @@ div {
   max-width: 400px;
 }
 
-.menu {
-  display: flex;
-  flex-wrap: wrap;
-  max-height: 100vh;
-  flex-direction: column;
-  margin-left: 20px;
-}
-
-.menu-item {
-  flex-grow: 1;
-  display: inline-block;
-  width: 80%;
-  border-radius: 10px;
-  border: 2px solid rgba(214, 41, 46, 1);
-  overflow: hidden;
-  margin: 3px;
-  height: 3rem;
-  padding: 10px;
-}
-
 .menu-item-open {
   flex-grow: 1;
   display: inline-block;

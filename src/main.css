@@ -1,0 +1,23 @@
+@import url("menu.css");
+
+.header {
+  height: 30vh;
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.body {
+  width: 65%;
+  min-height: 50vh;
+  margin: auto;
+  background-color: rgba(0, 100, 100, 0.5);
+}
+
+.footer {
+  height: 40vh;
+  background-color: green;
+}
+
+
