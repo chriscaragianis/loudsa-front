@@ -9,7 +9,11 @@ class News extends React.Component {
   render() {
     return(
       <div className="news-page">
-        News
+        <ul>
+          <li>News</li>
+          <li>items</li>
+          <li>here</li>
+        </ul>
       </div>
     );
   }

@@ -1,5 +1,4 @@
 import React from 'react';
-import TitleBar from '../TitleBar';
 import Calendar from '../Calendar';
 
 class CalendarPage extends React.Component {
@@ -11,8 +10,9 @@ class CalendarPage extends React.Component {
   render() {
     return(
       <div className="calendar-page page">
-        <TitleBar text="calendar" />
+        <h1>Events</h1>
         <Calendar />
+        sequential list with desciptions
       </div>
     );
   }

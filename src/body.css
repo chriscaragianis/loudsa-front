@@ -9,6 +9,10 @@
   align-items: stretch;
 }
 
+.calendar-page {
+  flex-direction: column !important;
+}
+
 .copy {
   margin: auto;
   width: 66.7%
