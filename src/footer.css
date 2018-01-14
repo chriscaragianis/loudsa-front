@@ -1,3 +1,23 @@
 .footer-container {
   display: flex;
+  background-color: pink;
+  justify-content: space-evenly;
 }
+
+.footer-column {
+
+}
+
+.social-icons {
+  background-color: red;
+}
+
+.social-icons ul {
+  list-style: none;
+}
+
+.social-icons li {
+  display: inline-block;
+}
+
+
