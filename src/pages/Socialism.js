@@ -2,10 +2,10 @@ import React from 'react';
 import Image from '../Image';
 import Lorem from '../lorem';
 
-const About = () => (
+const Socialism = () => (
   <div className="page about-page">
     <div className="copy about-copy">
-      <h1>About us</h1>
+      <h1>Socialism</h1>
       { Lorem }
     </div>
     <div className="image-strip">
@@ -16,4 +16,4 @@ const About = () => (
   </div>
 );
 
-export default About;
+export default Socialism;

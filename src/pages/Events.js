@@ -9,7 +9,9 @@ class CalendarPage extends React.Component {
   render() {
     return (
       <div className="calendar-page page">
+        <h1>Events</h1>
         <Calendar />
+        sequential list with desciptions
       </div>
     );
   }

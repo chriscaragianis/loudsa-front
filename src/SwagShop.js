@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactModal from 'react-modal';
-import OrderFormModal from './OrderFormModal';
 import text from './text';
 import SwagList from './SwagList';
 import shirt from './shirt.jpg';
@@ -56,7 +55,6 @@ class SwagShop extends React.Component {
           isOpen={this.state.modalOpen}
           styles={customStyles}
         >
-          <OrderFormModal />
         </ReactModal>
       </div>
     );
