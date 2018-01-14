@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import ContentContainer from './ContentContainer';
 import Menu from './Menu';
+import Footer from './Footer';
 import './main.css';
 
 class Layout extends React.Component {
@@ -24,7 +25,7 @@ class Layout extends React.Component {
             <ContentContainer />
           </div>
           <div className="footer">
-            Footer
+            <Footer />
           </div>
         </div>
       </BrowserRouter>
