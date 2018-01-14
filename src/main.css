@@ -1,5 +1,6 @@
 @import url("menu.css");
 @import url("body.css");
+@import url("footer.css");
 
 .header {
   height: 30vh;
