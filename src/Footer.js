@@ -5,9 +5,15 @@ const Footer = () => (
   <div className="footer-container">
     <div className="contact-column footer-column">
       <div className="social-icons">
-        <img src="facebook.svg" alt="facebook link" />
-        <img src="twitter.svg" alt="twitter link" />
-        <img src="gmail.svg" alt="gmail link" />
+        <a href="https://www.facebook.com/dsalouisville/">
+          <img src="facebook.svg" alt="facebook link" />
+        </a>
+        <a href="https://twitter.com/dsa_louisville">
+          <img src="twitter.svg" alt="twitter link" />
+        </a>
+        <a href="mailto:dsalouisville@gmail.com">
+          <img src="gmail.svg" alt="gmail link" />
+        </a>
       </div>
       <div className="footer-address">
         Louisville DSA<br/>
