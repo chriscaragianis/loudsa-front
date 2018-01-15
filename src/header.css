@@ -1,0 +1,27 @@
+.header img {
+  height: 10vh;
+}
+
+.header p {
+  margin: auto;
+  margin-top: 0;
+}
+.header-logo {
+  margin: auto;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  width: 60%;
+  margin: auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+
+.menu a {
+  text-decoration: none;
+}
+
+.menu-item {
+}

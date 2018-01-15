@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import ContentContainer from './ContentContainer';
 import 'normalize.css'
-import Menu from './Menu';
 import Footer from './Footer';
+import Header from './Header';
 import './main.css';
 
 class Layout extends React.Component {
@@ -15,12 +15,7 @@ class Layout extends React.Component {
     return (
       <BrowserRouter>
         <div className="container">
-          <div className="header">
-            <div className="header-logo">
-              Logo
-            </div>
-            <Menu />
-          </div>
+          <Header />
           <div className="body">
             <ContentContainer />
           </div>

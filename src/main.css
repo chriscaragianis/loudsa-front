@@ -1,7 +1,12 @@
-@import url("menu.css");
 @import url("body.css");
 @import url("footer.css");
 @import url("events.css");
+@import url("header.css");
+@import url('fonts.css');
+
+body {
+  font-family: Klima, sans-serif;
+}
 
 .header {
   height: 30vh;
@@ -24,11 +29,11 @@
   color: #ccc;
 }
 
-.footer a:link {
+a:link {
   color: #eee
 }
 
-.footer a:visited {
+a:visited {
   color: #aaa;
 }
 
