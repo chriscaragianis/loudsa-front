@@ -6,41 +6,20 @@ import _ from 'lodash';
 BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment));
 
 
-class Calendar extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      events: [],
-    };
-  }
-  componentDidMount() {
-    const request = new Request('http://localhost:4000/api/v1/events', {
-      method: 'GET',
-    });
-    const events = fetch(request)
-      .then((res) => res.json())
-      .then((json) => {
-        const ev = _.map(json, (x) => {
-          x.start = new Date(x.start);
-          x.end = new Date(x.end);
-        });
-        this.setState({
-          events: json,
-        });
-      });
-  }
-
-  render() {
-    return (
-      <div className="calendar">
-        <BigCalendar
-          events={this.state.events}
-          startAccessor='start'
-          endAccessor='end'
-        />
-      </div>
-    );
-  }
+const Calendar = (props) => {
+  const { events } = props;
+  return (
+    <div className="calendar">
+      <BigCalendar
+        selectable
+        onSelectEvent={event => alert(event.desc)}
+        events={events}
+        views={['month']}
+        startAccessor='start'
+        endAccessor='end'
+      />
+    </div>
+  );
 }
 
 export default Calendar;

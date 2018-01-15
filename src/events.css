@@ -1,0 +1,16 @@
+.calendar-page ul {
+  list-style: none;
+}
+
+.rbc-row {
+  min-height: 4rem;
+}
+
+.event-contact {
+  font-style: italic;
+  color: #aaa;
+}
+
+.event-contact a:link {
+  color: #888;
+}
