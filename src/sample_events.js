@@ -19,6 +19,16 @@ const events = [
     contactEmail: 'rosa@sdkpil.org',
     contactPhone: '(502) 555-1917',
   },
+  {
+    start: new Date(2017, 0, 21, 10, 30, 0, 0),
+    end: new Date(2017, 0, 21, 12, 30, 0, 0),
+    title: 'Bad event',
+    desc: 'This event should not show up in the list because it is old. Ok if it\'s on the calendar tho',
+    location: '123 Debs Dr',
+    contactName: 'Rosa Luxemburg',
+    contactEmail: 'rosa@sdkpil.org',
+    contactPhone: '(502) 555-1917',
+  },
 ]
 
 export default events;

@@ -1,5 +1,7 @@
 import React from 'react';
 import map from 'lodash/map';
+import moment from 'moment';
+import sortBy from 'lodash/sortBy';
 import Calendar from '../Calendar';
 import events from '../sample_events';
 
@@ -16,12 +18,14 @@ const makeContact = (e) => {
 };
 
 const makeEvents = (evs) => {
-  return map(events, (e, i) => (
+  return map(sortBy(events, (x) => x.start), (e, i) =>
+    moment() < moment(e.start) ? (
     <li key={i}>
       <h1 className="event-title>">{e.title}</h1>
       <p className="event-time">
-        Starts: {e.start.toString()}<br />
-        Ends: {e.end.toString()}
+        {moment(e.start).format("dddd, MMMM, Do YYYY")} <br />
+        Starts: {moment(e.start).format("h:mm:ss a")}<br />
+        Ends: {moment(e.end).format("h:mm:ss a")}<br />
       </p>
       <p className="event-desc">
         {e.desc}
@@ -30,7 +34,7 @@ const makeEvents = (evs) => {
         {makeContact(e)}
       </p>
     </li>
-));
+): '');
 };
 
 const CalendarPage = () => {
