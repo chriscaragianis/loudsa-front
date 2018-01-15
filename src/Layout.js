@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import ContentContainer from './ContentContainer';
+import 'normalize.css'
 import Menu from './Menu';
 import Footer from './Footer';
 import './main.css';
