@@ -7,11 +7,14 @@ BigCalendar.setLocalizer(BigCalendar.momentLocalizer(moment));
 
 
 const Calendar = (props) => {
-
+  const { events } = props;
   return (
     <div className="calendar">
       <BigCalendar
-        events={[]}
+        selectable
+        onSelectEvent={event => alert(event.desc)}
+        events={events}
+        views={['month']}
         startAccessor='start'
         endAccessor='end'
       />
