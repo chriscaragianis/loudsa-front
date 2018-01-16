@@ -1,0 +1,15 @@
+.news-page ul {
+  list-style: none;
+}
+
+.news-li {
+  margin-bottom: 3rem;
+}
+
+.news-item {
+  display: flex;
+}
+
+.news-item img {
+  margin-left: 2rem;
+}

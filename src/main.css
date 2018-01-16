@@ -3,6 +3,7 @@
 @import url("events.css");
 @import url("header.css");
 @import url('fonts.css');
+@import url('news.css');
 
 body {
   font-family: Klima, sans-serif;
