@@ -24,8 +24,8 @@ const makeEvents = (evs) => {
       <h1 className="event-title>">{e.title}</h1>
       <p className="event-time">
         {moment(e.start).format("dddd, MMMM, Do YYYY")} <br />
-        Starts: {moment(e.start).format("h:mm:ss a")}<br />
-        Ends: {moment(e.end).format("h:mm:ss a")}<br />
+        Starts: {moment(e.start).format("h:mm a")}<br />
+        Ends: {moment(e.end).format("h:mm a")}<br />
       </p>
       <p className="event-desc">
         {e.desc}
