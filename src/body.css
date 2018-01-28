@@ -15,7 +15,13 @@
 
 .copy {
   margin: auto;
-  width: 66.7%
+  width: 56%
+}
+
+.copy p {
+  margin-left: 3rem;
+  text-align: justify;
+  line-height: 1.2;
 }
 
 .image-strip {
@@ -24,4 +30,13 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
+}
+
+.image-container {
+}
+
+.image-container img {
+  object-fit: cover;
+  height: 200px;
+  width: 275px;
 }
