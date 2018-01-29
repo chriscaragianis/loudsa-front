@@ -40,3 +40,8 @@
   height: 200px;
   width: 275px;
 }
+
+.image-caption {
+  width: 200px;
+  margin: auto;
+}
