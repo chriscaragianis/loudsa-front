@@ -1,11 +1,16 @@
 .header img {
-  height: 10vh;
+  height: 20vh;
 }
 
 .header p {
   margin: auto;
   margin-top: 0;
 }
+
+.header {
+  background-color: #ed1c24;
+}
+
 .header-logo {
   margin: auto;
 }

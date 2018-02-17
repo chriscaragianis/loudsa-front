@@ -4,9 +4,8 @@ import Menu from './Menu';
 const Header = () => (
   <div className="header">
     <div className="header-logo">
-      <img alt="Louisville DSA logo" src="loudsa.png" /><br />
+      <img alt="Louisville DSA logo" src="dsalogo.png" /><br />
     </div>
-    <p>Democratic Socialists of America in Louisville and Southern Indiana</p>
     <Menu />
   </div>
 );
