@@ -1,8 +1,8 @@
 import React from 'react';
 
 const Image = (props) => (
-  <div>
-    <div className="image-container">
+  <div className="image-container">
+    <div className="">
       <img alt={props.alt} src={props.src} />
     </div>
     <div className="image-caption">

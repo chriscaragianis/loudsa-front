@@ -20,8 +20,8 @@ const About = () => (
     </div>
     <div className="image-strip">
       <Image src="about1.jpg" caption="Louisville DSA members rallying against the Dakota Access Pipeline" />
-      <Image src="about2.png" caption="A caption for the picture" />
-      <Image src="about3.jpg" caption="A caption for the picture" />
+      <Image src="about2.png" caption="Fighting for health care as a human right" />
+      <Image src="about3.jpg" caption="Marching in Pride 2017" />
     </div>
   </div>
 );

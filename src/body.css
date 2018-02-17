@@ -15,13 +15,13 @@
 
 .copy {
   margin: auto;
-  width: 56%
+  width: 46%
 }
 
 .copy p {
   margin-left: 3rem;
   text-align: justify;
-  line-height: 1.2;
+  line-height: 1.5;
 }
 
 .image-strip {
@@ -33,6 +33,7 @@
 }
 
 .image-container {
+  margin: 2rem;
 }
 
 .image-container img {
