@@ -1,5 +1,7 @@
 .news-page ul {
   list-style: none;
+  width: 60%;
+  margin-left: 15%;
 }
 
 .news-li {

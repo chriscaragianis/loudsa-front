@@ -17,10 +17,10 @@ const Footer = () => (
       </div>
       <div className="footer-address">
         Louisville DSA<br/>
-        123 Debs Dr <br/>
-        Louisville, KY 40217 <br/>
+        PO Box 406769 <br/>
+        Louisville, KY 40204<br/>
         <br/>
-        (502) 555-1917
+        (502) 309-4493
       </div>
     </div>
     <div className="menu-column footer-column">

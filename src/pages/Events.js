@@ -42,7 +42,7 @@ const CalendarPage = () => {
     <div className="calendar-page page">
       <h1>Events</h1>
       <Calendar events={events}/>
-      <ul>
+      <ul className="event-descriptions">
         {makeEvents(events)}
       </ul>
     </div>

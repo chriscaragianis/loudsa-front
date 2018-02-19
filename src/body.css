@@ -3,7 +3,6 @@
 }
 
 .page {
-  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: stretch;
@@ -11,6 +10,7 @@
 
 .calendar-page {
   flex-direction: column !important;
+  width: 60%;
 }
 
 .copy {
@@ -39,7 +39,7 @@
 .image-container img {
   object-fit: cover;
   height: 200px;
-  width: 275px;
+  width: 300px;
 }
 
 .image-caption {
