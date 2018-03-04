@@ -22,9 +22,9 @@ In DSA’s view, socialism is a tool to flatten the hierarchy of the world we li
 </p>
     </div>
     <div className="image-strip">
-      <Image src="http://lorempixel.com/200/200" caption="A caption for the picture" />
-      <Image src="http://lorempixel.com/200/200" caption="A caption for the picture" />
-      <Image src="http://lorempixel.com/200/200" caption="A caption for the picture" />
+      <Image src="pullman.jpg" caption="Socialism in the United States hit a high water mark in the early twentieth century which saw Eugene V. Debs run for president five times on the Socialist Party ticket." />
+      <Image src="wva.jpg" caption="The power of collective worker action to change their conditions on display in the West Viginia Teacher's Strike of 2018" />
+      <Image src="organize.jpg" caption="Socialism seeks to reorder the relationship between work and value from one based on power and coersion to one based on solidarity and democracy." />
     </div>
   </div>
 );

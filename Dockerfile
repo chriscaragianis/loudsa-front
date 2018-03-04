@@ -1,11 +1,4 @@
-FROM node:latest
-
-# Create app directory
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-
-COPY build/ /usr/src/app/
-
-RUN npm install -g serve
-
-CMD [ "serve", "-p", "5000", "." ]
+FROM kyma/docker-nginx
+COPY build /var/www
+COPY vhosts.conf /etc/nginx/conf.d/
+CMD 'nginx'
