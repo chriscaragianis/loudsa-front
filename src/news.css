@@ -13,5 +13,10 @@
 }
 
 .news-item img {
-  margin-left: 2rem;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  max-width: 320px;
+  max-height: 260px;
+  width: auto;
+  height: auto;
 }
