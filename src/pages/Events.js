@@ -26,6 +26,7 @@ const makeEvents = (evs) => {
         {moment(e.start).format("dddd, MMMM, Do YYYY")} <br />
         Starts: {moment(e.start).format("h:mm a")}<br />
         Ends: {moment(e.end).format("h:mm a")}<br />
+        Location: {e.location}<br/>
       </p>
       <p className="event-desc">
         {e.desc}
